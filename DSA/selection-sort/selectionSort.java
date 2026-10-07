@@ -1,28 +1,28 @@
 
-public class sorting {
+public class selectionSort {
     public static void main(String[] args)
     {
         int nums[] = {5,3,5,8,2,4,9};
         int size = nums.length;
-        int temp = 0;
 
         System.out.println("Before sorting : ");
         for(int num : nums){
             System.out.print(num + " ");
         };
 
-        for(int i = 0; i < size; i++)
+        for(int i = 1; i< size; i++)
         {
-            for(int j = 0;  j < size-i-1 ; j++){
+            int key = nums[i];
+            int j = i-1;
 
-                if(nums[j] > nums[j+1]){
-                    temp = nums[j];
-                    nums[j] = nums[j+1];
-                    nums[j+1] = temp;
-                }
+            while(j >= 0 && nums[j] > key){
+                nums[j+1] = nums[j];
+                j = j - 1;
             }
+            nums[j+1] = key;
         }
 
+        System.out.println();
         System.out.println("After sorting Array: ");
         for(int num : nums){
             System.out.print(num + " ");
