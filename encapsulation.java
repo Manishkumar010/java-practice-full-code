@@ -14,9 +14,15 @@ class Human {
     };
 
     // setter age
+    // public void setAge(int a)
+    // {
+    //     age = a;
+    // }
+
+    // This keyboard uses
     public void setAge(int a)
     {
-        age = a;
+        this.age=a;
     }
 
     // getter name
@@ -26,10 +32,17 @@ class Human {
     }
 
     // setter name
-    public void setName(String n)
-    {
-        name = n;
-    }
+    // public void setName(String n)
+    // {
+    //     name = n;
+    // }
+
+    // This keybord uses
+    public void setName(String name)
+	{
+		this.name=name;
+	}
+
 }
 
 public class encapsulation {
