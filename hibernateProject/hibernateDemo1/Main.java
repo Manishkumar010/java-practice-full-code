@@ -5,17 +5,26 @@ import org.hibernate.cfg.Configuration;
 public class Main{
     public static void main(String[] args){
         Alien a1 = new Alien();
-        a1.setAid(101);
-        a1.setAname("Manish");
-        a1.setTech("java");
+        // a1.setAid(101);
+        // a1.setAname("Manish");
+        // a1.setTech("java");
+
+        a1.setAid(1002);
+        a1.setAname("harsh");
+        a1.setTech("Spring");
 
         // hibernate save with a1 object
 
         Configuration config = new Configuration();
+        config.addAnnotatedClass(com.telusko.Alien.class)
         config.configure();
         SessionFactory factory = config.buildSessionFactory();
         Session session = factory.openSession();
+
+        Transaction transaction = session.beginTransaction();
         session.persist(a1);
-        
+        transaction.commit();
+        session.close();
+        factory.close();
     }
 }
