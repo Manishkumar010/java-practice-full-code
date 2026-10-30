@@ -1,4 +1,5 @@
 package com.example.myApp;
 
-public class Computer {
+public interface Computer {
+    void compile();
 }
