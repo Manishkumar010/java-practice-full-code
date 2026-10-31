@@ -1,7 +1,8 @@
 package org.example;
 
+
 public class Dev {
-    public void build(){
+    public void build() {
         System.out.println("working on Awesome Project");
     }
-};
+}
